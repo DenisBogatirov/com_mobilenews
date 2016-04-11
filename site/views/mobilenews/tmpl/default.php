@@ -25,6 +25,6 @@ $obj = array(
 );
 
 
-echo json_encode($obj);
+echo json_encode($obj, JSON_PRETTY_PRINT, JSON_NUMERIC_CHECK);
 jexit();
 ?>
