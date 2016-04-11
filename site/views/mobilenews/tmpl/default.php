@@ -10,21 +10,17 @@
 // No direct access to this file
 defined('_JEXEC') or die('Restricted access');
 ?>
-<!-- <h1><?php echo $this->msg; ?></h1> -->
 <?php
 
-$obj = array(
+$obj =
   (object) array(
-
     "userId" => 1,
     "id" => 1,
     "title" => "delectus aut autem",
     "completed" => false
-
-  )
 );
 
 
-echo json_encode($obj, JSON_PRETTY_PRINT, JSON_NUMERIC_CHECK);
+echo json_encode(array($obj,$obj,$obj,$obj), JSON_PRETTY_PRINT, JSON_NUMERIC_CHECK);
 jexit();
 ?>
