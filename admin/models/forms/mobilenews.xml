@@ -23,14 +23,14 @@
 				class="inputbox"
 				default=""
 				/>
-				<field
-						name="img"
-						type="media"
-						label="COM_MOBILENEWS_MOBILENEWS_IMG_LABEL"
-						description="COM_MOBILENEWS_MOBILENEWS_IMG_DESC"
-						directory="mobile_news"
-						preview="true"
-						/>
+		<field
+				name="img"
+				type="media"
+				label="COM_MOBILENEWS_MOBILENEWS_IMG_LABEL"
+				description="COM_MOBILENEWS_MOBILENEWS_IMG_DESC"
+				directory="mobile_news"
+				preview="true"
+				/>
 
 	</fieldset>
 </form>

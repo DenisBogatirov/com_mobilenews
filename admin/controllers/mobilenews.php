@@ -18,4 +18,12 @@ defined('_JEXEC') or die('Restricted access');
  */
 class MobileNewsControllerMobileNews extends JControllerForm
 {
+  function save(){
+   parent::save();
+   $this->setredirect('index.php?option=com_mobilenews');
+  }
+  function cancel(){
+   parent::cancel();
+   $this->setredirect('index.php?option=com_mobilenews');
+  }
 }
