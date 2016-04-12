@@ -18,7 +18,7 @@ defined('_JEXEC') or die('Restricted Access');
       <th><?php echo JText::_('COM_MOBILENEWS_ID'); ?></th>
       <th width="10%"><?php echo JText::_('COM_MOBILENEWS_MOBILENEWSLIST_TITLE'); ?></th>
 			<th width="70%">
-				<?php echo JText::_('COM_MOBILENEWS_MOBILENEWSLIST_NAME') ;?>
+				<?php echo JText::_('COM_MOBILENEWS_MOBILENEWSLIST_TEXT') ;?>
 			</th>
 			<th width="9%">
 				<?php echo JText::_('COM_MOBILENEWS_IMG'); ?>
