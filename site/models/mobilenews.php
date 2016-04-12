@@ -45,29 +45,38 @@ class MobileNewsModelMobileNews extends JModelItem
 	 *
 	 * @return  string        Fetched String from Table for relevant Id
 	 */
-	public function getMsg($id = 1)
+	public function getMsg()
 	{
-		if (!is_array($this->messages))
+		$this->messages = array();
+		$db    = JFactory::getDbo();
+		$query = $db->getQuery(true);
+
+		$query->select('*');
+		$query->from('#__mobilenews');
+    // ->order('ordering ASC');
+
+		$db->setQuery($query);
+
+// fetch result as an object list
+		$result = $db->loadObjectList();
+
+		// Create the base select statement.
+
+
+		foreach ($result as $row)
 		{
-			$this->messages = array();
+			$news = array(
+					"newsID" => $row->id,
+					"newsDate" => $row->date,
+					"newsTitle" => $row->title,
+					"newsLitteImg" => $row->img,
+					"newsText" => $row->text
+			);
+			array_push($this->messages, $news);
 		}
-
-		if (!isset($this->messages[$id]))
-		{
-			// Request the selected id
-			$jinput = JFactory::getApplication()->input;
-			$id     = $jinput->get('id', 1, 'INT');
-
-			// Get a TableHelloWorld instance
-			$table = $this->getTable();
-
-			// Load the message
-			$table->load($id);
-
 			// Assign the message
-			$this->messages[$id] = $table->title;
-		}
 
-		return $this->messages[$id];
+
+		return $this->messages;
 	}
 }
