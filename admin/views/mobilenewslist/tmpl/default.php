@@ -57,14 +57,13 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo JHtml::_('grid.id', $i, $row->id); ?>
 						</td>
 						<td>
-							<?php echo $row->title; ?>
-							<a href="<?php echo $link; ?>" title="<?php echo JText::_('COM_MOBILENEWS_EDIT_MOBILENEWS'); ?>">
+							<a href="<?php echo $link; ?>"><?php echo $row->title; ?></a>
 						</td>
             <td>
 							<?php echo $row->text; ?>
 						</td>
             <td>
-							<img src="<?php echo $row->img; ?>">
+							<img src="<?php echo JURI::root() . $row->img; ?>">
 						</td>
 						<td align="center">
 							<?php echo $row->date; ?>
