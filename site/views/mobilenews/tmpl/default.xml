@@ -3,4 +3,17 @@
 	<layout title="COM_MOBILENEWS_MOBILENEWS_VIEW_DEFAULT_TITLE">
 		<message>COM_MOBILENEWS_MOBILENEWS_VIEW_DEFAULT_DESC</message>
 	</layout>
+	<fields
+			name="request"
+			addfieldpath="/administrator/components/com_mobilenews/models/fields"
+			>
+		<fieldset name="request">
+			<field
+					name="id"
+					type="mobilenews"
+					label="COM_MOBILENEWS_MOBILENEWS_FIELD_GREETING_LABEL"
+					description="COM_MOBILENEWS_MOBILENEWS_FIELD_GREETING_DESC"
+					/>
+		</fieldset>
+	</fields>
 </metadata>
