@@ -38,7 +38,18 @@ class MobileNewsViewMobileNewsList extends JViewLegacy
 			return false;
 		}
 
+		// Set the toolbar
+		$this->addToolBar();
+
 		// Display the template
 		parent::display($tpl);
+	}
+
+	protected function addToolBar()
+	{
+		JToolBarHelper::title(JText::_('COM_MOBILENEWS_MANAGER_MOBILENEWSLIST'));
+		JToolBarHelper::addNew('mobilenews.add');
+		JToolBarHelper::editList('mobilenews.edit');
+		JToolBarHelper::deleteList('', 'mobilenewslist.delete');
 	}
 }
