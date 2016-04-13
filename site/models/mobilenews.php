@@ -45,15 +45,20 @@ class MobileNewsModelMobileNews extends JModelItem
 	 *
 	 * @return  string        Fetched String from Table for relevant Id
 	 */
-	public function getMsg()
+	public function getMsg($offset = 0)
 	{
+
+		$jinput = JFactory::getApplication()->input;
+		$offset     = $jinput->get('offset', 1, 'INT');
+
 		$this->messages = array();
 		$db    = JFactory::getDbo();
 		$query = $db->getQuery(true);
 
 		$query->select('*');
 		$query->from('#__mobilenews');
-    // ->order('ordering ASC');
+		$query->order('date DESC');
+
 
 		$db->setQuery($query);
 
@@ -77,6 +82,6 @@ class MobileNewsModelMobileNews extends JModelItem
 			// Assign the message
 
 
-		return $this->messages;
+		return array_slice($this->messages, $offset, 2);
 	}
 }

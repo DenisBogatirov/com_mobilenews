@@ -9,7 +9,7 @@
 			>
 		<fieldset name="request">
 			<field
-					name="id"
+					name="offset"
 					type="mobilenews"
 					label="COM_MOBILENEWS_MOBILENEWS_FIELD_GREETING_LABEL"
 					description="COM_MOBILENEWS_MOBILENEWS_FIELD_GREETING_DESC"
