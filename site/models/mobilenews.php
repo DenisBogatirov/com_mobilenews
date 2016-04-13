@@ -49,7 +49,7 @@ class MobileNewsModelMobileNews extends JModelItem
 	{
 
 		$jinput = JFactory::getApplication()->input;
-		$offset     = $jinput->get('offset', 1, 'INT');
+		$offset     = $jinput->get('offset', 0, 'INT');
 
 		$this->messages = array();
 		$db    = JFactory::getDbo();
@@ -82,6 +82,6 @@ class MobileNewsModelMobileNews extends JModelItem
 			// Assign the message
 
 
-		return array_slice($this->messages, $offset, 2);
+		return array_slice($this->messages, $offset, 5);
 	}
 }

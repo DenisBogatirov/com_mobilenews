@@ -37,6 +37,7 @@ class JFormFieldMobileNews extends JFormFieldList
 		$query = $db->getQuery(true);
 		$query->select('id,title,text,date,img');
 		$query->from('#__mobilenews');
+		$query->order('date DESC');
 		$db->setQuery((string) $query);
 		$messages = $db->loadObjectList();
 		$options  = array();

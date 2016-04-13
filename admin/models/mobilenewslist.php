@@ -28,7 +28,9 @@ class MobileNewsModelMobileNewsList extends JModelList
 		$query = $db->getQuery(true);
 
 		// Create the base select statement.
-		$query->select('*')->from($db->quoteName('#__mobilenews'));
+		$query->select('*');
+		$query->from('#__mobilenews');
+		$query->order('date DESC');
 
 		return $query;
 	}
