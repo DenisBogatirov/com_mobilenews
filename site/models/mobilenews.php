@@ -70,12 +70,15 @@ class MobileNewsModelMobileNews extends JModelItem
 
 		foreach ($result as $row)
 		{
+			list($width, $height, $type, $attr) = getimagesize($row->img);
 			$news = array(
 					"newsID" => $row->id,
 					"newsDate" => $row->date,
 					"newsTitle" => $row->title,
 					"newsLitteImg" => $row->img,
-					"newsText" => $row->text
+					"newsText" => $row->text,
+					"newsImgWidth" => $width,
+					"newsImgHeight" => $height
 			);
 			array_push($this->messages, $news);
 		}

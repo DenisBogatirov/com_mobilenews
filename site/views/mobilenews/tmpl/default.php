@@ -12,24 +12,6 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
   <?php
-    echo json_encode($this->msg);
+    echo json_encode($this->msg, JSON_PRETTY_PRINT);
     jexit();
   ?>
-
-<?php
-
-// $obj = array(
-//   (object) array(
-//
-//     "userId" => 1,
-//     "id" => 1,
-//     "title" => "delectus aut autem",
-//     "completed" => false
-//
-//   )
-// );
-//
-//
-// echo json_encode($obj, JSON_PRETTY_PRINT, JSON_NUMERIC_CHECK);
-// jexit();
-?>
