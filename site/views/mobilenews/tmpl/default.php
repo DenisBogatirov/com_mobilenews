@@ -12,6 +12,6 @@ defined('_JEXEC') or die('Restricted access');
 ?>
 
   <?php
-    echo json_encode($this->msg, JSON_PRETTY_PRINT);
+    echo json_encode($this->msg);
     jexit();
   ?>

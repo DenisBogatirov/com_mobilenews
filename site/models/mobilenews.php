@@ -72,7 +72,7 @@ class MobileNewsModelMobileNews extends JModelItem
 		{
 			list($width, $height, $type, $attr) = getimagesize($row->img);
 			$news = array(
-					"newsID" => $row->id,
+					"newsID" => intval($row->id),
 					"newsDate" => $row->date,
 					"newsTitle" => $row->title,
 					"newsLitteImg" => $row->img,
