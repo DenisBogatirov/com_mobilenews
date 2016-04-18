@@ -71,11 +71,12 @@ class MobileNewsModelMobileNews extends JModelItem
 		foreach ($result as $row)
 		{
 			list($width, $height, $type, $attr) = getimagesize($row->img);
+			$imageLink = substr( $row->img, 0, 4 ) === "http" ? $row->img : JURI::root() . $row->img;
 			$news = array(
 					"newsID" => intval($row->id),
 					"newsDate" => $row->date,
 					"newsTitle" => $row->title,
-					"newsLitteImg" => $row->img,
+					"newsLitteImg" => $imageLink,
 					"newsText" => $row->text,
 					"newsImgWidth" => $width,
 					"newsImgHeight" => $height

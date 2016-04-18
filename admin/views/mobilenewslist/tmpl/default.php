@@ -63,7 +63,7 @@ defined('_JEXEC') or die('Restricted Access');
 							<?php echo $row->text; ?>
 						</td>
             <td>
-							<img src="<?php echo JURI::root() . $row->img; ?>">
+							<img src="<?php echo substr( $row->img, 0, 4 ) === "http" ? $row->img : JURI::root() . $row->img; ?>">
 						</td>
 						<td align="center">
 							<?php echo $row->date; ?>
