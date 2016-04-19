@@ -75,6 +75,8 @@
     <languages folder="admin/language">
       <language tag="en-GB">en-GB/en-GB.com_mobilenews.ini</language>
       <language tag="en-GB">en-GB/en-GB.com_mobilenews.sys.ini</language>
+      <language tag="ru-RU">ru-RU/ru-RU.com_mobilenews.ini</language>
+      <language tag="ru-RU">ru-RU/ru-RU.com_mobilenews.sys.ini</language>
     </languages>
   </administration>
 
